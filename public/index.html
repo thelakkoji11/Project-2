@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Craft Studio | Learn to Build the Responsive Web</title>
+  <meta name="description" content="A mobile-first learning hub for responsive web design, built with semantic HTML5, CSS Grid, Flexbox and vanilla JavaScript." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Craft Studio home">
+        <span class="brand-mark" aria-hidden="true">◧</span> Craft Studio
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="sr-only">Toggle navigation menu</span>
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#guides">Guides</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn btn-ghost" id="themeToggle" aria-pressed="false">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="eyebrow">Digital Craftsmanship</p>
+        <h1 id="hero-title">Build the Future, One Breakpoint at a Time</h1>
+        <p class="lead">A strategic, mobile-first toolkit for full-stack interns: semantic markup, fluid layouts and accessible interfaces that adapt to any screen.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#guides">Explore guides</a>
+          <a class="btn btn-ghost" href="#principles">See the principles</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="device device-desktop"></div>
+        <div class="device device-tablet"></div>
+        <div class="device device-phone"></div>
+      </div>
+    </section>
+
+    <section class="section" id="guides" aria-labelledby="guides-title">
+      <div class="section-head">
+        <h2 id="guides-title">Content Grid</h2>
+        <p class="saved-count" aria-live="polite">Saved: <strong id="savedCount">0</strong></p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter guides by topic">
+        <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" data-filter="html" aria-pressed="false">HTML5</button>
+        <button class="chip" data-filter="css" aria-pressed="false">CSS3</button>
+        <button class="chip" data-filter="js" aria-pressed="false">JavaScript</button>
+        <button class="chip" data-filter="design" aria-pressed="false">Design</button>
+      </div>
+
+      <div class="card-grid" id="cardGrid"></div>
+      <p class="empty" id="emptyMsg" hidden>No guides match this filter yet.</p>
+    </section>
+
+    <section class="section section-alt" id="principles" aria-labelledby="principles-title">
+      <h2 id="principles-title">The Standards</h2>
+      <div class="principles">
+        <article>
+          <h3>Semantic Integrity</h3>
+          <p>The right element for the right job, so screen readers, search engines and AI tools can read the page like a table of contents.</p>
+        </article>
+        <article>
+          <h3>2025 UI/UX Warmth</h3>
+          <p>Mocha Mousse for stability, Ethereal Blue for trust and Moonlit Grey for refinement: warm and grounded, not sterile.</p>
+        </article>
+        <article>
+          <h3>Universal Access</h3>
+          <p>Strict WCAG adherence: visible focus, sufficient contrast, keyboard operation and respect for reduced motion.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Get in Touch</h2>
+      <form id="contactForm" class="form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+          <p class="error" id="nameError" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+          <p class="error" id="emailError" role="alert"></p>
+        </div>
+        <div class="field field-wide">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+          <p class="error" id="messageError" role="alert"></p>
+        </div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Craft Studio. Built for the DecodeLabs Internship Program, Project 1.</p>
+  </footer>
+</body>
+</html>

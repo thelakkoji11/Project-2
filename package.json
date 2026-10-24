@@ -1,0 +1,14 @@
+{
+  "name": "craft-studio-api",
+  "version": "1.0.0",
+  "description": "DecodeLabs Project 2: Backend API Development",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/api.test.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
