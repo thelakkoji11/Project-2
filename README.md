@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Craft Studio API: DecodeLabs Project 2 (Backend API Development)
 
 A small REST API in **Node.js + Express** that powers the Project 1 frontend.
@@ -86,3 +87,6 @@ public/            Project 1 frontend, now API-powered
 1. `git add .`, `git commit -m "Project 2: backend API"`, then push. `.gitignore` keeps `node_modules` out.
 2. Deploy the API (Render or Railway have free tiers; start command `npm start`). GitHub Pages cannot run Node, so it only suits the static Project 1.
 3. Submit the repo link, the live API URL, and screenshots of requests showing 200, 201, 400, 404 and 429.
+=======
+# Project-2
+>>>>>>> e16a9d0918ed9ec2366e0a51a9646c2c9e21b11e
